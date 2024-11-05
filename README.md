@@ -1,5 +1,11 @@
 # tifosi
 
+Dans ce repository se trouve mon projet de création de base de données pour le restaurant Tifosi.
+Il se compose : de différents scripts SQL pour l'importation de la base, son peuplement ainsi que pour effectuer un backup de celle-ci.
+Enfin, un utilisateur spécifique avec des droits d'administration a été créé pour cette base : 
+- nom : tifosi
+- mot de passe : tifosi
+
 ## script SQL permettant l'import de la base de données
 
 CREATE SCHEMA IF NOT EXISTS `tifosi` DEFAULT CHARACTER SET utf8mb3 ;
@@ -186,5 +192,6 @@ INSERT INTO `focaccia` (`nom_focaccia`, `prix_focaccia`) VALUES ('Mozaccia', '9.
 
 ### Importer le fichier tifosi.sql depuis l'onglet import de phpmyadmin
 
-### Importer le fichier backup_tifosi.sql en tapant le script ci-dessous dans le shell de Xampp
-mysql -u root tifosi < backup_tifosi.sql
+### Importer le fichier backup_tifosi.sql en tapant les scripts ci-dessous dans le shell de Xampp :
+- pour réaliser le backup : mysql -u root tifosi > backup_tifosi.sql
+- pour importer le backup : mysql -u root tifosi < backup_tifosi.sql
